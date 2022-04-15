@@ -1,6 +1,7 @@
 package org.acme;
 
 import io.quarkus.test.junit.QuarkusTest;
+import io.quarkus.test.junit.mockito.InjectMock;
 import io.quarkus.test.junit.mockito.InjectSpy;
 
 import org.junit.jupiter.api.Test;
@@ -26,7 +27,7 @@ public class GreetingResourceTest {
           .then()
              .statusCode(200)
              .body(is("Hello RESTEasy"));
-        Mockito.verify(exampleApi,Mockito.atLeastOnce()).foobar(any(), any());
+        Mockito.verify(exampleApi,Mockito.atLeastOnce()).foobar(any());
     }
 
 }

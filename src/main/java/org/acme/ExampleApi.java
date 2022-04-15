@@ -16,5 +16,5 @@ public interface ExampleApi {
     @POST
     @Path("/foobar")
     @Consumes({"application/json"})
-    public void foobar(@PathParam("foo") String foo, String requestBody);
+    public void foobar(String requestBody);
 }
